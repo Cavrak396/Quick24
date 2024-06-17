@@ -1,0 +1,285 @@
+/*!************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/scss/style.scss ***!
+  \************************************************************************************************************************************************************************************/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Roboto";
+}
+
+button:hover {
+  cursor: pointer;
+  transition: 0.7s;
+  transform: scale(1.05);
+}
+
+.login__panel-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 6px;
+}
+
+.login__panel-login,
+.login__panel-register {
+  padding: 8px 12px;
+  font-size: 15px;
+  border-radius: 20px;
+  border: none;
+}
+
+.login__panel-login {
+  background-color: rgb(212, 212, 212);
+  margin-right: 10px;
+}
+
+.login__panel-register {
+  background-color: rgb(255, 0, 0);
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+}
+
+.login__panel-skip {
+  color: rgba(100, 100, 100, 0.7);
+  border: none;
+  font-size: 13px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  text-decoration: underline;
+  margin-bottom: 20px;
+}
+
+.login {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.login::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 15;
+  background-color: rgb(1, 1, 1);
+  opacity: 0.4;
+  z-index: 5;
+}
+
+.login__panel {
+  position: absolute;
+  border-radius: 30px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  min-height: 30px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 10px 14px 28px rgb(212, 212, 212);
+  padding: 20px 0;
+  z-index: 10;
+}
+
+.login__panel-jointext {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.login__panel-title {
+  font-size: 30px;
+}
+
+.login__panel-undertitle {
+  font-size: 12px;
+  margin-top: -1px;
+  display: block;
+}
+
+.login__panel-content {
+  margin: 0 auto;
+  max-width: 55%;
+}
+
+.login__panel-tag {
+  display: block;
+  font-size: 12px;
+  padding-left: 7px;
+  margin-bottom: 2px;
+}
+
+.login__panel-input {
+  margin: 0 auto 15px auto;
+  border-radius: 20px;
+  border: rgba(1, 1, 1, 0.5) solid 1px;
+  padding: 5px 10px;
+  width: 100%;
+}
+
+.login__panel-text {
+  text-align: center;
+}
+
+.login__panel-sale {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.login__panel-lines {
+  font-size: 15px;
+  color: rgba(100, 100, 100, 0.7);
+  line-height: 18px;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.login__panel-decoration {
+  color: rgb(255, 0, 0);
+}

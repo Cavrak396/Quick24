@@ -1,0 +1,87 @@
+.login {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 100vh;
+
+  @include after {
+    @include darker;
+    background-color: $black;
+    opacity: 0.4;
+    z-index: 5;
+  }
+
+  @include background;
+}
+
+.login__panel {
+  position: absolute;
+  border-radius: 30px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  min-height: 30px;
+  background-color: $white;
+  box-shadow: 10px 14px 28px $gray;
+  padding: 20px 0;
+  z-index: 10;
+}
+
+.login__panel-jointext {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: $semi;
+}
+
+.login__panel-title {
+  font-size: 30px;
+}
+
+.login__panel-undertitle {
+  font-size: 12px;
+  margin-top: -1px;
+  display: block;
+}
+
+.login__panel-content {
+  margin: 0 auto;
+  max-width: 55%;
+}
+
+.login__panel-tag {
+  display: block;
+  font-size: 12px;
+  padding-left: 7px;
+  margin-bottom: 2px;
+}
+
+.login__panel-input {
+  margin: 0 auto 15px auto;
+  border-radius: 20px;
+  border: $light_black solid 1px;
+  padding: 5px 10px;
+  width: 100%;
+}
+
+.login__panel-text {
+  text-align: center;
+}
+
+.login__panel-sale {
+  font-size: 20px;
+  font-weight: $semi;
+  margin-bottom: 5px;
+}
+
+.login__panel-lines {
+  font-size: 15px;
+  color: $deep_gray;
+  line-height: 18px;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.login__panel-decoration {
+  color: $red;
+}

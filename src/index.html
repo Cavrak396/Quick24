@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <script type="module" src="js/controller.js"></script>
+    <title>Quick24</title>
+</head>
+
+<body>
+    <header></header>
+    <main>
+        <section class="login" style="background-image: url('images/login-panel-image.jpg')">
+            <form class="login__panel js-login-panel">
+                <div class="login__panel-jointext">
+                    <h2 class="login__panel-title">Quick<span class="login__panel-decoration">24</span></h2>
+                    <span class="login__panel-undertitle">Fast delievery</span>
+                </div>
+                <div class="login__panel-content">
+                    <label class="login__panel-tag" for="login__panel-name">Name:</label>
+                    <input type="text" id="login__panel-name" class="login__panel-input login__panel-input--name">
+                    <label class="login__panel-tag" for="login__panel-password">Password:</label>
+                    <input type="text" id="login__panel-password"
+                        class="login__panel-input login__panel-input--password">
+                    <div class="login__panel-buttons">
+                        <button type="button" class="login__panel-login">Login</button>
+                        <button type="button" class="login__panel-register">Register</button>
+                    </div>
+                    <button type="button" class="login__panel-skip">Nevermind!</button>
+                </div>
+                <div class="login__panel-text">
+                    <h2 class="login__panel-sale">Why set up an account?</h2>
+                    <p class="login__panel-lines">With a registered user account, you get a
+                        <span class="login__panel-decoration">10%</span> discount on every purchase.
+                    </p>
+                </div>
+            </form>
+
+        </section>
+    </main>
+    <footer></footer>
+</body>
+
+</html>

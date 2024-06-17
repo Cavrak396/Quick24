@@ -1,0 +1,43 @@
+button {
+  @include hover {
+    cursor: pointer;
+    transition: $normal;
+    transform: scale(1.05);
+  }
+}
+
+.login__panel-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 6px;
+}
+
+.login__panel-login,
+.login__panel-register {
+  padding: 8px 12px;
+  font-size: 15px;
+  border-radius: 20px;
+  border: none;
+}
+
+.login__panel-login {
+  background-color: $gray;
+  margin-right: 10px;
+}
+
+.login__panel-register {
+  background-color: $red;
+  color: $white;
+  font-weight: $semi;
+}
+
+.login__panel-skip {
+  color: $deep_gray;
+  border: none;
+  font-size: 13px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  text-decoration: underline;
+  margin-bottom: 20px;
+}
