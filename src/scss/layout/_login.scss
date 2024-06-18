@@ -57,7 +57,7 @@
 }
 
 .login__panel-input {
-  margin: 0 auto 15px auto;
+  margin: 0 auto 12px auto;
   border-radius: 20px;
   border: $light_black solid 1px;
   padding: 5px 10px;
@@ -84,4 +84,5 @@
 
 .login__panel-decoration {
   color: $red;
+  font-weight: $semi;
 }
