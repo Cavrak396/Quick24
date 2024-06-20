@@ -1,0 +1,130 @@
+.support {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $light_black;
+}
+
+.support__container {
+  position: absolute;
+  width: 800px;
+  min-height: 800px;
+  background-color: $white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  border-radius: 20px;
+}
+
+.support__image-holder {
+  position: relative;
+  min-height: 300px;
+  border-radius: 20px 20px 0 0;
+
+  @include background;
+
+  @include after {
+    @include darker;
+    background-color: $black;
+    opacity: 0.4;
+    z-index: 1;
+    border-radius: 20px 20px 0 0;
+  }
+}
+
+.support__image-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-10deg);
+  font-weight: $semi;
+  color: $white;
+  z-index: 10;
+  font-size: 30px;
+  background-color: $red;
+  padding: 10px;
+}
+
+.support__text {
+  padding: 20px 20px 30px 20px;
+}
+
+.support__title {
+  text-align: center;
+  font-size: 18px;
+  font-weight: $semi;
+  margin-bottom: 34px;
+}
+
+.support__contact-line {
+  display: flex;
+}
+
+.support__work-time {
+  margin-right: 30px;
+}
+
+.support__time {
+  display: block;
+}
+
+.support__work-text {
+  display: block;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.support__time-decoration {
+  color: $red;
+  font-weight: $semi;
+}
+
+.support__time {
+  display: block;
+  margin-bottom: 7px;
+  font-size: 14px;
+}
+
+.support__contact-title {
+  display: block;
+  margin-bottom: 12px;
+  font-weight: $semi;
+  font-size: 19px;
+}
+
+.support__contact-text {
+  max-width: 600px;
+  line-height: 20px;
+  margin-bottom: 15px;
+}
+
+.support__socials {
+  margin-bottom: 20px;
+}
+
+.support__mail-text,
+.support__phone-text {
+  display: block;
+  margin-bottom: 7px;
+}
+
+.support__message-tag {
+  display: block;
+  font-size: 12px;
+}
+
+.support__text-input {
+  display: block;
+  padding: 10px 10px 100px 10px;
+  width: 80%;
+  margin-bottom: 14px;
+}
+
+.support__close-img{
+  max-width: 100%;
+  max-height: 100%;
+  filter: brightness(200%);
+}

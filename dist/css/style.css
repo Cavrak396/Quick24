@@ -148,6 +148,12 @@ body {
   font-family: "Roboto";
 }
 
+.wrap {
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 1800px;
+}
+
 .login__error {
   display: block;
   color: rgb(255, 0, 0);
@@ -190,11 +196,44 @@ button:hover {
   margin-bottom: 20px;
 }
 
+.shop__header-button {
+  color: rgb(255, 255, 255);
+  background-color: rgb(255, 0, 0);
+  border-radius: 20px;
+  border: none;
+  font-size: 20px;
+  padding: 8px 15px;
+  box-shadow: 4px 4px 17px 5px rgb(212, 212, 212);
+  font-weight: 500;
+}
+
+.support__button {
+  display: block;
+  padding: 10px 15px;
+  font-weight: 600;
+  background-color: rgb(255, 0, 0);
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 20px;
+}
+
+.support__close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  max-width: 30px;
+  max-height: 30px;
+  background: none;
+  border: none;
+  z-index: 15;
+}
+
 .login {
   position: relative;
   top: 0;
   left: 0;
   height: 100vh;
+  display: none;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -283,4 +322,218 @@ button:hover {
 .login__panel-decoration {
   color: rgb(255, 0, 0);
   font-weight: 600;
+}
+
+.shop__header-line,
+.shop__header-primary,
+.shop__header-form,
+.navigation__list {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.shop__header-line {
+  padding: 20px 0;
+  justify-content: space-between;
+}
+
+.shop__header-logo {
+  display: block;
+  font-size: 40px;
+  font-weight: 600;
+  color: rgb(1, 1, 1);
+}
+
+.shop__logo-decoration {
+  color: rgb(255, 0, 0);
+}
+
+.shop__header-form {
+  display: flex;
+}
+
+.shop__header-search {
+  display: block;
+  width: 600px;
+  padding: 10px 12px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 4px 4px 17px 5px rgb(212, 212, 212);
+  margin: 0 15px;
+}
+
+.navigation__list-item {
+  margin-right: 30px;
+}
+
+.navigation__list-link {
+  display: flex;
+  align-items: center;
+  color: rgb(1, 1, 1);
+  font-size: 15px;
+}
+.navigation__list-link:hover {
+  transition: 0.7s;
+  opacity: 0.7;
+}
+
+.navigation__link-image {
+  display: block;
+  max-width: 25px;
+  max-height: 25px;
+  margin-right: 8px;
+}
+
+.navigation__link-text {
+  color: rgb(1, 1, 1);
+  opacity: 0.6;
+}
+
+.shop__sales {
+  display: block;
+  text-align: center;
+  padding: 13px;
+  font-size: 17px;
+  width: 100%;
+  background-color: rgb(1, 1, 1);
+  color: rgb(255, 255, 255);
+}
+
+.support {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(1, 1, 1, 0.5);
+}
+
+.support__container {
+  position: absolute;
+  width: 800px;
+  min-height: 800px;
+  background-color: rgb(255, 255, 255);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  border-radius: 20px;
+}
+
+.support__image-holder {
+  position: relative;
+  min-height: 300px;
+  border-radius: 20px 20px 0 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.support__image-holder::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 15;
+  background-color: rgb(1, 1, 1);
+  opacity: 0.4;
+  z-index: 1;
+  border-radius: 20px 20px 0 0;
+}
+
+.support__image-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-10deg);
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+  z-index: 10;
+  font-size: 30px;
+  background-color: rgb(255, 0, 0);
+  padding: 10px;
+}
+
+.support__text {
+  padding: 20px 20px 30px 20px;
+}
+
+.support__title {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 34px;
+}
+
+.support__contact-line {
+  display: flex;
+}
+
+.support__work-time {
+  margin-right: 30px;
+}
+
+.support__time {
+  display: block;
+}
+
+.support__work-text {
+  display: block;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.support__time-decoration {
+  color: rgb(255, 0, 0);
+  font-weight: 600;
+}
+
+.support__time {
+  display: block;
+  margin-bottom: 7px;
+  font-size: 14px;
+}
+
+.support__contact-title {
+  display: block;
+  margin-bottom: 12px;
+  font-weight: 600;
+  font-size: 19px;
+}
+
+.support__contact-text {
+  max-width: 600px;
+  line-height: 20px;
+  margin-bottom: 15px;
+}
+
+.support__socials {
+  margin-bottom: 20px;
+}
+
+.support__mail-text,
+.support__phone-text {
+  display: block;
+  margin-bottom: 7px;
+}
+
+.support__message-tag {
+  display: block;
+  font-size: 12px;
+}
+
+.support__text-input {
+  display: block;
+  padding: 10px 10px 100px 10px;
+  width: 80%;
+  margin-bottom: 14px;
+}
+
+.support__close-img {
+  max-width: 100%;
+  max-height: 100%;
+  filter: brightness(200%);
 }
