@@ -70,6 +70,13 @@
   max-height: 100px;
 }
 
+.admin__products-title {
+  font-size: 30px;
+  font-weight: $medium;
+  text-align: center;
+  padding: 20px 0;
+}
+
 .admin__products-list {
   display: flex;
   flex-wrap: wrap;
@@ -77,7 +84,7 @@
 }
 
 .admin__products-item {
-  margin: 0 10px;
+  margin: 0 10px 40px 10px;
   max-width: calc(33.33% - 20px);
   flex: 1 1 calc(33.33% - 20px);
   text-align: center;
@@ -95,6 +102,7 @@
   font-size: 18px;
   font-weight: $semi;
   margin-bottom: 5px;
+  line-height: 22px;
 }
 
 .admin__product-price {

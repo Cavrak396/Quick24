@@ -92,15 +92,17 @@ class AdminView extends View {
   _generateProductStatus() {
     return `
     <div class="admin__products">
+    <h2 class="admin__products-title"> Online Warehouse 📦</h2>
      <ul class="admin__products-list"> ${this.productData
        .map((data) => {
          return `
        <li class="admin__products-item"> 
         <img src='${data.thumbnail}' class="admin__product-image">
         <span class="admin__product-title"> ${data.title} </span>
-        <span class="admin__product-price"> ${data.price} </span>
+        <span class="admin__product-price"> ${data.price}$ </span>
        </li>`;
        })
+       .slice(0, this.productData.length - 1)
        .join(" ")} </ul>
     </div>
     `;

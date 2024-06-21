@@ -609,6 +609,13 @@ button:hover {
   max-height: 100px;
 }
 
+.admin__products-title {
+  font-size: 30px;
+  font-weight: 500;
+  text-align: center;
+  padding: 20px 0;
+}
+
 .admin__products-list {
   display: flex;
   flex-wrap: wrap;
@@ -616,7 +623,7 @@ button:hover {
 }
 
 .admin__products-item {
-  margin: 0 10px;
+  margin: 0 10px 40px 10px;
   max-width: calc(33.33% - 20px);
   flex: 1 1 calc(33.33% - 20px);
   text-align: center;
@@ -634,6 +641,7 @@ button:hover {
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 5px;
+  line-height: 22px;
 }
 
 .admin__product-price {
