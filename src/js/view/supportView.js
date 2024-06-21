@@ -6,14 +6,14 @@ class SupportView extends View {
   supportCloud;
 
   _handleSupportButtonClick() {
-    if (!this.supportBtn) return; 
+    if (!this.supportBtn) return;
     this.supportBtn.addEventListener("click", () => {
       this._showSupportCloud();
     });
   }
 
   _handleCloseButtonClick() {
-    if (!this.closeBtn || !this.supportCloud) return; 
+    if (!this.closeBtn || !this.supportCloud) return;
     this.closeBtn.addEventListener("click", () => {
       this.supportCloud.style.display = "none";
     });

@@ -537,3 +537,73 @@ button:hover {
   max-height: 100%;
   filter: brightness(200%);
 }
+
+.admin {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(1, 1, 1, 0.5);
+}
+
+.admin__container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1200px;
+  height: 800px;
+  background-color: rgb(255, 255, 255);
+}
+
+.admin__line {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.admin__options,
+.admin__preview {
+  height: 100%;
+}
+
+.admin__options {
+  max-width: 25%;
+  flex: 1 1 25%;
+  background-color: rgb(112, 128, 144);
+}
+
+.admin__preview {
+  max-width: 75%;
+  flex: 1 1 75%;
+}
+
+.admin__navigation-item {
+  width: 100%;
+}
+.admin__navigation-item:hover {
+  background-color: rgb(106, 13, 173);
+  cursor: pointer;
+  transition: 0.7s;
+}
+
+.admin__navigation-link {
+  display: block;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  width: 100%;
+  padding: 20px 10px;
+}
+
+.admin__account {
+  max-width: 400px;
+  padding: 20px 0;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.admin__profile-photo {
+  max-width: 100px;
+  max-height: 100px;
+}
