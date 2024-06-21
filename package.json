@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode development",
     "prod": "webpack --mode production",
-    "watch": "webpack --watch --mode development"
+    "watch": "webpack --watch --mode development",
+    "server": "json-server --watch database_data.json --port 8000"
   },
   "repository": {
     "type": "git",
@@ -34,5 +35,8 @@
     "stylelint-webpack-plugin": "^5.0.0",
     "webpack": "^5.90.3",
     "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "json-server": "0.17.0"
   }
 }

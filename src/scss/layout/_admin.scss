@@ -37,6 +37,7 @@
 .admin__preview {
   max-width: 75%;
   flex: 1 1 75%;
+  overflow: scroll;
 }
 
 .admin__navigation-item {
@@ -67,4 +68,36 @@
 .admin__profile-photo {
   max-width: 100px;
   max-height: 100px;
+}
+
+.admin__products-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.admin__products-item {
+  margin: 0 10px;
+  max-width: calc(33.33% - 20px);
+  flex: 1 1 calc(33.33% - 20px);
+  text-align: center;
+}
+
+.admin__product-image {
+  display: block;
+  max-width: 100px;
+  max-height: 100px;
+  margin: 0 auto 10px auto;
+}
+
+.admin__product-title {
+  display: block;
+  font-size: 18px;
+  font-weight: $semi;
+  margin-bottom: 5px;
+}
+
+.admin__product-price {
+  display: block;
+  font-size: 15px;
 }

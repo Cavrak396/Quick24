@@ -9,6 +9,11 @@ class AdminView extends View {
     this.adminData = data;
   }
 
+  setProductData(data) {
+    this.productData = data.data;
+    console.log(this.productData);
+  }
+
   _handleAccountClick() {
     this.adminBtn.addEventListener("click", () => {
       this.shop.insertAdjacentHTML("afterbegin", this._generateMarkup());
@@ -63,7 +68,7 @@ class AdminView extends View {
         content = this._generateAdminStatus(this.adminData);
         break;
       case "products":
-        content = "<p>Product details go here.</p>";
+        content = this._generateProductStatus(this.productData);
         break;
       case "offers":
         content = "<p>Offer details go here.</p>";
@@ -80,6 +85,23 @@ class AdminView extends View {
       <img src='${data.image}' alt="user photo" class="admin__profile-photo">
       <p>Name: ${data.name}</p>
       <p>Location: ${data.location}</p> 
+    </div>
+    `;
+  }
+
+  _generateProductStatus() {
+    return `
+    <div class="admin__products">
+     <ul class="admin__products-list"> ${this.productData
+       .map((data) => {
+         return `
+       <li class="admin__products-item"> 
+        <img src='${data.thumbnail}' class="admin__product-image">
+        <span class="admin__product-title"> ${data.title} </span>
+        <span class="admin__product-price"> ${data.price} </span>
+       </li>`;
+       })
+       .join(" ")} </ul>
     </div>
     `;
   }

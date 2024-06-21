@@ -1,8 +1,17 @@
 import * as model from "./model.js";
-import View from "./view/view.js";
 import loginView from "./view/loginView.js";
 import supportView from "./view/supportView.js";
 import adminView from "./view/adminView.js";
+
+const handleProducts = function () {
+  return model
+    .getProducts()
+    .then((data) => data)
+    .catch((error) => {
+      console.error("Error fetching products:", error);
+      return [];
+    });
+};
 
 const init = function () {
   loginView._disableLoginScreen();
@@ -11,8 +20,10 @@ const init = function () {
   supportView._handleSupportButtonClick();
   adminView._handleAccountClick();
 
-  // Pass admin data to the admin view
-  adminView.setAdminData(model.adminAccount);
+  handleProducts().then((data) => {
+    adminView.setAdminData(model.adminAccount);
+    adminView.setProductData(data);
+  });
 };
 
 init();
