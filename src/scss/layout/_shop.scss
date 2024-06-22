@@ -67,11 +67,91 @@
 }
 
 .shop__sales {
-    display: block;
-    text-align: center;
-    padding: 13px;
-    font-size: 17px;
-    width: 100%;
+  display: block;
+  text-align: center;
+  padding: 13px;
+  font-size: 17px;
+  width: 100%;
+  background-color: $black;
+  color: $white;
+}
+
+.shop__marketing-line {
+  display: flex;
+  padding: 20px 0;
+}
+
+.shop__marketing-list--large {
+  margin: 0 10px;
+  max-width: calc(60% - 20px);
+  flex: 1 1 calc(60% - 20px);
+}
+
+.shop__marketing-list--small {
+  margin: 0 auto;
+  max-width: calc(40% - 20px);
+  flex: 1 1 calc(40% - 20px);
+}
+
+.shop__marketing-item {
+  position: relative;
+  max-width: 100%;
+  border-radius: 20px;
+
+  @include background;
+
+  @include hover {
+    transform: scale(1.01);
+    transition: $normal;
+  }
+}
+
+.shop__marketing-item--large {
+  min-height: 600px;
+}
+
+.shop__marketing-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+
+  @include after {
+    @include darker;
     background-color: $black;
-    color: $white;
+    opacity: 0.5;
+    z-index: 1;
+    border-radius: 20px;
+  }
+}
+
+.shop__marketing-link--large {
+  min-height: 600px;
+}
+
+.shop__marketing-title {
+  position: relative;
+  position: absolute;
+  font-weight: $semi;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: $white;
+  z-index: 10;
+}
+
+.shop__marketing-title--large {
+  font-size: 40px;
+}
+
+.shop__marketing-title--small {
+  font-size: 20px;
+}
+
+.shop__marketing-item--small {
+  min-height: 295px;
+  margin-bottom: 10px;
 }

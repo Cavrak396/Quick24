@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   height: 100vh;
-  display: none; // Here is !!
+   display: none; // Here is !!
 
   @include after {
     @include darker;

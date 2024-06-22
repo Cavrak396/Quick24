@@ -2,6 +2,7 @@ import * as model from "./model.js";
 import loginView from "./view/loginView.js";
 import supportView from "./view/supportView.js";
 import adminView from "./view/adminView.js";
+import offersView from "./view/offersView.js";
 
 const handleProducts = function () {
   return model
@@ -23,6 +24,8 @@ const init = function () {
   handleProducts().then((data) => {
     adminView.setAdminData(model.adminAccount);
     adminView.setProductData(data);
+    offersView.setOffersData(data);
+    offersView._handleOffersUI();
   });
 };
 

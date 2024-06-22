@@ -2,8 +2,10 @@ import View from "./view.js";
 
 class AdminView extends View {
   adminBtn = document.querySelector(".js-account");
+  adminContainer;
   adminStatusBtns;
   previewContainer;
+  closeBtn;
 
   setAdminData(data) {
     this.adminData = data;
@@ -11,20 +13,25 @@ class AdminView extends View {
 
   setProductData(data) {
     this.productData = data.data;
-    console.log(this.productData);
   }
 
   _handleAccountClick() {
     this.adminBtn.addEventListener("click", () => {
       this.shop.insertAdjacentHTML("afterbegin", this._generateMarkup());
+      this.adminContainer = document.querySelector(".js-admin");
+      this.closeBtn = document.querySelector(".js-close-admin");
       this._handleAdminStatus();
+      this._closeAdminContainer();
     });
   }
 
   _generateMarkup() {
     return `
-    <section class="admin">
+    <section class="admin js-admin">
       <div class="admin__container">
+       <button type="button" class="admin__close-btn js-close-admin">
+            <img src="images/close.png" alt="close icon" class="admin__close-img">
+          </button>
         <div class="admin__line">
           <div class="admin__options">
             <nav class="admin__navigation">
@@ -46,6 +53,12 @@ class AdminView extends View {
       </div>
     </section>
     `;
+  }
+
+  _closeAdminContainer() {
+    this.closeBtn.addEventListener("click", () => {
+      this.adminContainer.style.display = "none";
+    });
   }
 
   _handleAdminStatus() {
