@@ -1,7 +1,6 @@
 import View from "./view.js";
 
 class AdminView extends View {
-  adminBtn = document.querySelector(".js-account");
   adminContainer;
   adminStatusBtns;
   previewContainer;

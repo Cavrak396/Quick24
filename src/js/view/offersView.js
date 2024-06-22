@@ -22,7 +22,7 @@ class OffersView extends View {
             </a>
             </li>`
           )
-          .slice(0, this.offersData.length - 1)
+          .slice(0, 10)
           .join(" ")}
         `;
   }

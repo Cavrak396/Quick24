@@ -10,7 +10,9 @@ class Login extends View {
 
   _disableLoginScreen() {
     this.userButton.addEventListener("click", () => {
-      this.loginPanel.style.display = "none";
+      this.loginPanel.remove();
+      this.adminBtn.remove();
+      this.body.style.overflow = "auto";
     });
   }
 
@@ -20,7 +22,8 @@ class Login extends View {
         adminData.name === this.name.value &&
         adminData.password === this.password.value
       )
-        this.loginPanel.style.display = "none";
+        this.loginPanel.remove();
+      this.body.style.overflow = "auto";
     });
   }
 
