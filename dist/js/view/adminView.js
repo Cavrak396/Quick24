@@ -44,6 +44,9 @@ class AdminView extends View {
                 <li class="admin__navigation-item">
                   <a href="#" class="admin__navigation-link js-status-link js-offers-btn" data-type="offers">Offers</a>
                 </li>
+                  <li class="admin__navigation-item">
+                  <a href="#" class="admin__navigation-link js-status-link js-suggestions-btn" data-type="suggestions">User Suggestions</a>
+                </li>
               </ul>
             </nav>
           </div>
@@ -84,6 +87,9 @@ class AdminView extends View {
         break;
       case "offers":
         content = "<p>Offer details go here.</p>";
+        break;
+      case "suggestions":
+        content = "<p>Suggestions</p>";
         break;
       default:
         content = "<p>Select an option to view details.</p>";

@@ -56,7 +56,10 @@ button {
 }
 
 .support__close-btn,
-.admin__close-btn {
+.admin__close-btn,
+.help__close-btn,
+.products__close-btn,
+.shop__cart-close {
   position: absolute;
   top: 10px;
   right: 10px;

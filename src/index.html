@@ -46,6 +46,12 @@
         <section class="shop js-shop">
             <div class="shop__header">
                 <div class="wrap">
+                    <div class="shop__cart js-cart">
+                        <button type="button" class="shop__cart-close js-close-cart">
+                            <img src="images/close.png" alt="close icon" class="shop__close-img">
+                        </button>
+                        <ul class="shop__cart-list js-cart-list"></ul>
+                    </div>
                     <div class="shop__header-line">
                         <div class="shop__header-primary">
                             <a href="javascript:;" class="shop__header-logo">
@@ -59,10 +65,10 @@
                         <nav class="navigation">
                             <ul class="navigation__list">
                                 <li class="navigation__list-item">
-                                    <a href="javascript:;" class="navigation__list-link"> Help </a>
+                                    <a href="javascript:;" class="navigation__list-link js-help"> Help </a>
                                 </li>
                                 <li class="navigation__list-item">
-                                    <a href="javascript:;" class="navigation__list-link"> Offers </a>
+                                    <a href="javascript:;" class="navigation__list-link js-products"> Products </a>
                                 </li>
                                 <li class="navigation__list-item">
                                     <a href="javascript:;" class="navigation__list-link js-account">
@@ -78,7 +84,7 @@
                                     </a>
                                 </li>
                                 <li class="navigation__list-item">
-                                    <a href="javascript:;" class="navigation__list-link">
+                                    <a href="javascript:;" class="navigation__list-link js-cart-btn">
                                         <img src="images/shopping-cart.png" alt="shoping cart"
                                             class="navigation__link-image">
                                     </a>
