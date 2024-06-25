@@ -164,11 +164,22 @@
   width: 30%;
   background-color: $white;
   z-index: 30;
+  overflow: scroll;
+  box-shadow: -5px 10px 24px 15px $light_black;
+  padding: 20px;
+}
+
+.shop__cart-empty {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .shop__cart-item {
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .shop__cart-image {
@@ -194,6 +205,13 @@
 
 .shop__cart-decoration {
   font-weight: $medium;
+}
+
+.shop__cart-submits {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50%, -20px);
 }
 
 .active {

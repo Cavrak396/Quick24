@@ -29,10 +29,10 @@ class SupportView extends View {
   _generateMarkup() {
     return `
       <section class="support js-support">
-        <div class="support__container">
-          <button type="button" class="support__close-btn js-close-support">
+      <button type="button" class="support__close-btn js-close-support">
             <img src="images/close.png" alt="close icon" class="support__close-img">
           </button>
+        <div class="support__container">
           <div class="support__image-holder" style="background-image: url('images/customer-support.jpg')">
             <span class="support__image-text"> Contact Us. </span>
           </div>

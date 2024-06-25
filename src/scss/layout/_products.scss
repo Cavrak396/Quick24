@@ -69,7 +69,9 @@
   text-align: center;
 }
 
-.products__product-image {
+.products__product-image,
+.products__undo-img,
+.products__delete-img {
   max-width: 100%;
   max-height: 100%;
 }

@@ -225,7 +225,8 @@ button:hover {
 .admin__close-btn,
 .help__close-btn,
 .products__close-btn,
-.shop__cart-close {
+.shop__cart-close,
+.products__clear-btn {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -234,6 +235,15 @@ button:hover {
   background: none;
   border: none;
   z-index: 15;
+}
+
+.products__delete-btn {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  border: none;
+  max-width: 30px;
+  max-height: 30px;
 }
 
 .login {
@@ -503,11 +513,22 @@ button:hover {
   width: 30%;
   background-color: rgb(255, 255, 255);
   z-index: 30;
+  overflow: scroll;
+  box-shadow: -5px 10px 24px 15px rgba(1, 1, 1, 0.5);
+  padding: 20px;
+}
+
+.shop__cart-empty {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .shop__cart-item {
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .shop__cart-image {
@@ -533,6 +554,13 @@ button:hover {
 
 .shop__cart-decoration {
   font-weight: 500;
+}
+
+.shop__cart-submits {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50%, -20px);
 }
 
 .active {
@@ -867,11 +895,45 @@ button:hover {
   width: 90%;
   height: 90%;
   background-color: rgb(255, 255, 255);
+  padding: 30px 30px 10px 30px;
+  overflow: scroll;
 }
 
 .help__close-img {
   max-width: 100%;
   max-height: 100%;
+}
+
+.help__title {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.help__undertitle {
+  display: inline-block;
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 35px;
+  background-color: rgb(255, 0, 0);
+  padding: 10px 5px;
+  transform: rotate(3deg);
+}
+
+.help__methods-item {
+  margin-bottom: 25px;
+  max-width: 1400px;
+}
+
+.help__methods-linetitle {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.help__methods-lines {
+  line-height: 20px;
+  color: rgba(100, 100, 100, 0.7);
 }
 
 .products {
@@ -945,7 +1007,9 @@ button:hover {
   text-align: center;
 }
 
-.products__product-image {
+.products__product-image,
+.products__undo-img,
+.products__delete-img {
   max-width: 100%;
   max-height: 100%;
 }

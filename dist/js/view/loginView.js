@@ -12,7 +12,7 @@ class Login extends View {
     this.userButton.addEventListener("click", () => {
       this.loginPanel.remove();
       this.adminBtn.remove();
-      this.body.style.overflow = "auto";
+      this.body.style.overflowY = "auto";
     });
   }
 
@@ -23,7 +23,7 @@ class Login extends View {
         adminData.password === this.password.value
       )
         this.loginPanel.remove();
-      this.body.style.overflow = "auto";
+      this.body.style.overflowY = "auto";
     });
   }
 
@@ -32,9 +32,11 @@ class Login extends View {
       if (
         adminData.name !== this.name.value ||
         adminData.password !== this.password.value
-      )
+      ) {
         this.loginError.textContent =
           "Something went wrong, check name or password!";
+        this.body.style.overflow = "hidden";
+      }
     });
   }
 }
