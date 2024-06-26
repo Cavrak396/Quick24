@@ -199,6 +199,13 @@
   transform: translate(-50%, -20px);
 }
 
+.shop__cart-informations {
+  position: absolute;
+  display: none;
+  bottom: 15px;
+  left: 15px;
+}
+
 .active {
   right: 0;
   transition: $normal;

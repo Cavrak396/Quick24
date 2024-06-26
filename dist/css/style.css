@@ -257,10 +257,6 @@ button:hover {
 }
 
 .shop__cart-button {
-  display: none;
-  position: absolute;
-  bottom: 15px;
-  left: 15px;
   background-color: rgb(255, 0, 0);
   color: rgb(255, 255, 255);
   border: none;
@@ -570,6 +566,13 @@ button:hover {
   bottom: 20px;
   left: 50%;
   transform: translate(-50%, -20px);
+}
+
+.shop__cart-informations {
+  position: absolute;
+  display: none;
+  bottom: 15px;
+  left: 15px;
 }
 
 .active {

@@ -13,7 +13,7 @@ class ProductsView extends View {
   productCart = document.querySelector(".js-cart");
   productCartBtn = document.querySelector(".js-cart-btn");
   productCartCloser = document.querySelector(".js-close-cart");
-  cartOrderBtn = document.querySelector(".js-cart-orderBtn");
+  cartOrderForm = document.querySelector(".js-cart-informations");
 
   setProductsData(data) {
     this.productsData = data.data;
@@ -48,8 +48,8 @@ class ProductsView extends View {
   }
 
   _toggleOrderButton() {
-    if (this.cartOrderBtn) {
-      this.cartOrderBtn.style.display =
+    if (this.cartOrderForm) {
+      this.cartOrderForm.style.display =
         this.productInfo.size === 0 ? "none" : "block";
     }
   }
