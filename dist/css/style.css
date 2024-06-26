@@ -262,8 +262,8 @@ button:hover {
   border: none;
   padding: 5px 10px;
   border-radius: 20px;
-  font-size: 20px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .login {
@@ -536,10 +536,16 @@ button:hover {
   position: relative;
 }
 
+.shop__cart-list {
+  max-height: 610px;
+  overflow: scroll;
+}
+
 .shop__cart-image {
   display: block;
   max-width: 150px;
   max-height: 150px;
+  margin-right: 10px;
 }
 
 .shop__cart-title,
@@ -573,6 +579,15 @@ button:hover {
   display: none;
   bottom: 15px;
   left: 15px;
+}
+
+.shop__cart-user,
+.shop__cart-address {
+  display: block;
+  border-radius: 20px;
+  padding: 10px 15px;
+  margin-bottom: 5px;
+  width: 350px;
 }
 
 .active {

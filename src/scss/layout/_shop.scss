@@ -167,10 +167,16 @@
   position: relative;
 }
 
+.shop__cart-list {
+  max-height: 610px;
+  overflow: scroll;
+}
+
 .shop__cart-image {
   display: block;
   max-width: 150px;
   max-height: 150px;
+  margin-right: 10px;
 }
 
 .shop__cart-title,
@@ -204,6 +210,15 @@
   display: none;
   bottom: 15px;
   left: 15px;
+}
+
+.shop__cart-user,
+.shop__cart-address {
+  display: block;
+  border-radius: 20px;
+  padding: 10px 15px;
+  margin-bottom: 5px;
+  width: 350px;
 }
 
 .active {
