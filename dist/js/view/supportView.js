@@ -16,11 +16,13 @@ class SupportView extends View {
     if (!this.closeBtn || !this.supportCloud) return;
     this.closeBtn.addEventListener("click", () => {
       this.supportCloud.style.display = "none";
+      this.body.style.overflowY = "auto";
     });
   }
 
   _showSupportCloud() {
     this.shop.insertAdjacentHTML("afterbegin", this._generateMarkup());
+    this.body.style.overflow = "hidden";
     this.closeBtn = document.querySelector(".js-close-support");
     this.supportCloud = document.querySelector(".js-support");
     this._handleCloseButtonClick();

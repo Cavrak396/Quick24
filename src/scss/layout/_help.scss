@@ -57,3 +57,15 @@
   line-height: 20px;
   color: $deep_gray;
 }
+
+.help__form-label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.help__message-input {
+  display: block;
+  width: 500px;
+  padding: 5px 10px 160px 10px;
+  margin-bottom: 10px;
+}

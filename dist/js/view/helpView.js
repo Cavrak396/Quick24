@@ -69,6 +69,11 @@ class HelpView extends View {
     </p>
     </li>
     </ul>
+    <form class="help__form">
+    <label for="help__message" class="help__form-label"> Send Message </label>
+     <input type="text" class="help__message-input" id="help__message">
+     <button type="button" class="help__message-btn"> Send </button>
+    </form>
     </div>
     </section>
     `;

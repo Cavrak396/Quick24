@@ -41,6 +41,7 @@
 }
 
 .admin__preview {
+  position: relative;
   max-width: 75%;
   flex: 1 1 75%;
   overflow: scroll;
@@ -65,15 +66,23 @@
 }
 
 .admin__account {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   max-width: 400px;
   padding: 20px 0;
-  margin: 0 auto;
   text-align: center;
 }
 
 .admin__profile-photo {
   max-width: 100px;
   max-height: 100px;
+  margin-bottom: 15px;
+}
+
+.admin__username {
+  margin-bottom: 7px;
 }
 
 .admin__products-title {

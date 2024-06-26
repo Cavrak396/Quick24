@@ -8,19 +8,23 @@ class ProductsView extends View {
   quantity;
   orderBtn;
   deleteOrder;
+  undoOrder;
   productInfo = new Set();
   productCart = document.querySelector(".js-cart");
   productCartBtn = document.querySelector(".js-cart-btn");
   productCartCloser = document.querySelector(".js-close-cart");
+  cartOrderBtn = document.querySelector(".js-cart-orderBtn");
 
   setProductsData(data) {
     this.productsData = data.data;
   }
 
   _handleCartActivity() {
-    this.productCartBtn.addEventListener("click", () => {
-      this.productCart.classList.add("active");
-    });
+    if (this.productCartBtn) {
+      this.productCartBtn.addEventListener("click", () => {
+        this.productCart.classList.add("active");
+      });
+    }
   }
 
   _handleOrderQuantity(price) {
@@ -28,72 +32,115 @@ class ProductsView extends View {
   }
 
   _handleClosingOrder() {
-    this.productCartCloser.addEventListener("click", () => {
-      this.productCart.classList.remove("active");
-    });
+    if (this.productCartCloser) {
+      this.productCartCloser.addEventListener("click", () => {
+        this.productCart.classList.remove("active");
+      });
+    }
+  }
+
+  _updateEmptyCartMessage() {
+    const emptyCartMsg = document.querySelector(".js-empty-cart");
+    if (emptyCartMsg) {
+      emptyCartMsg.textContent =
+        this.productInfo.size === 0 ? "There is no products." : "";
+    }
+  }
+
+  _toggleOrderButton() {
+    if (this.cartOrderBtn) {
+      this.cartOrderBtn.style.display =
+        this.productInfo.size === 0 ? "none" : "block";
+    }
   }
 
   _handleDeleteOrder() {
-    this.deleteOrder.addEventListener("click", () => {
-      this.deleteOrder.closest(".js-cart-item").remove();
-      document.querySelector(".js-empty-cart").textContent =
-        "There is no products.";
-    });
+    if (this.productCart) {
+      this.productCart.addEventListener("click", (event) => {
+        if (event.target.closest(".js-delete-products")) {
+          const cartItem = event.target.closest(".js-cart-item");
+          if (cartItem) {
+            const title = cartItem
+              .querySelector(".shop__cart-title")
+              .textContent.trim();
+            this.productInfo.delete(title);
+            cartItem.remove();
+            this._updateEmptyCartMessage();
+            this._toggleOrderButton();
+          }
+        }
+      });
+    }
+  }
+
+  _handleUndoOrder() {
+    if (this.undoOrder) {
+      this.undoOrder.addEventListener("click", () => {
+        const order = this.undoOrder.closest(".js-order");
+        if (order) order.remove();
+        this._toggleOrderButton();
+      });
+    }
   }
 
   _handleProductsClick() {
-    this.productsBtn.addEventListener("click", () => {
-      this.shop.insertAdjacentHTML("afterbegin", this._generateMarkup());
-      this.body.style.overflow = "hidden";
-      this.closeBtn = document.querySelector(".js-close-products");
-      this.productsContainer = document.querySelector(".js-products");
-      this.products = document.querySelectorAll(".js-products-item");
-      this._handleCloseClick();
-      this._handleProductsOrder();
-      this._handleUndoOrder();
-    });
+    if (this.productsBtn) {
+      this.productsBtn.addEventListener("click", () => {
+        this.shop.insertAdjacentHTML("afterbegin", this._generateMarkup());
+        this.body.style.overflow = "hidden";
+        this.closeBtn = document.querySelector(".js-close-products");
+        this.productsContainer = document.querySelector(".js-products");
+        this.products = document.querySelectorAll(".js-products-item");
+        this._handleCloseClick();
+        this._handleProductsOrder();
+      });
+    }
   }
 
   _handleCloseClick() {
-    this.closeBtn.addEventListener("click", () => {
-      this.productsContainer.remove();
-      this.body.style.overflowY = "auto";
-    });
+    if (this.closeBtn) {
+      this.closeBtn.addEventListener("click", () => {
+        if (this.productsContainer) this.productsContainer.remove();
+        this.body.style.overflowY = "auto";
+      });
+    }
   }
 
   _handleOrderClick(thumbnail, title, price) {
-    this.orderBtn.addEventListener("click", () => {
-      this.quantity = document.querySelector(".js-product-quantity").value;
-      const numericPrice = Number(price.slice(0, -1));
-      const productItem = {
-        thumbnail: thumbnail,
-        title: title,
-        price: price,
-        quantity: this._handleOrderQuantity(numericPrice),
-      };
+    if (this.orderBtn) {
+      this.orderBtn.addEventListener("click", () => {
+        this.quantity = document.querySelector(".js-product-quantity").value;
+        const numericPrice = Number(price.slice(0, -1));
+        const productItem = {
+          thumbnail: thumbnail,
+          title: title,
+          price: price,
+          quantity: this._handleOrderQuantity(numericPrice),
+        };
 
-      if (!this.productInfo.has(title)) {
-        this.productInfo.add(title);
-        this.productCart
-          .querySelector(".js-cart-list")
-          .insertAdjacentHTML(
-            "afterbegin",
-            this._generateCartItemMarkup(productItem)
-          );
-      }
+        if (!this.productInfo.has(title)) {
+          this.productInfo.add(title);
+          this.productCart
+            .querySelector(".js-cart-list")
+            .insertAdjacentHTML(
+              "afterbegin",
+              this._generateCartItemMarkup(productItem)
+            );
+          this._toggleOrderButton();
+        }
 
-      this.orderBtn.closest(".js-order").remove();
-      document.querySelector(".js-empty-cart").textContent = "";
-      this.deleteOrder = document.querySelector(".js-delete-products");
-      this._handleDeleteOrder();
-    });
+        this.orderBtn.closest(".js-order").remove();
+        this._updateEmptyCartMessage();
+        this._handleDeleteOrder();
+      });
+    }
   }
 
   _generateCartItemMarkup(cartItem) {
     return `<li class="shop__cart-item js-cart-item">
-     <button type="button" class="products__delete-btn js-delete-products">
-          <img src="images/close.png" alt="close icon" class="products__delete-img">
-        </button>
+      <button type="button" class="products__delete-btn js-delete-products">
+        <img src="images/close.png" alt="close icon" class="products__delete-img">
+      </button>
       <img src="${cartItem.thumbnail}" alt="product image" class="shop__cart-image">
       <div class="shop__cart-line">
         <span class="shop__cart-title"> ${cartItem.title} </span>
@@ -104,20 +151,24 @@ class ProductsView extends View {
   }
 
   _handleProductsOrder() {
-    this.products.forEach((item) => {
-      item.addEventListener("click", () => {
-        const itemThumb = item.querySelector(".js-product-image").src;
-        const itemTitle = item.querySelector(".js-product-title").textContent;
-        const itemPrice = item.querySelector(".js-item-price").textContent;
+    if (this.products) {
+      this.products.forEach((item) => {
+        item.addEventListener("click", () => {
+          const itemThumb = item.querySelector(".js-product-image").src;
+          const itemTitle = item.querySelector(".js-product-title").textContent;
+          const itemPrice = item.querySelector(".js-item-price").textContent;
 
-        this.shop.insertAdjacentHTML(
-          "afterbegin",
-          this._generateProductOrder(itemThumb, itemTitle, itemPrice)
-        );
-        this.orderBtn = document.querySelector(".js-order-btn");
-        this._handleOrderClick(itemThumb, itemTitle, itemPrice);
+          this.shop.insertAdjacentHTML(
+            "afterbegin",
+            this._generateProductOrder(itemThumb, itemTitle, itemPrice)
+          );
+          this.orderBtn = document.querySelector(".js-order-btn");
+          this._handleOrderClick(itemThumb, itemTitle, itemPrice);
+          this.undoOrder = document.querySelector(".js-undo-product");
+          this._handleUndoOrder();
+        });
       });
-    });
+    }
   }
 
   _generateMarkup() {
@@ -163,8 +214,8 @@ class ProductsView extends View {
     return `
       <div class="products__order js-order">
         <div class="products__order-container">
-        <button type="button" class="products__clear-btn js-undo-product">
-          <img src="images/close.png" alt="close icon" class="products__undo-img">
+          <button type="button" class="products__clear-btn js-undo-product">
+            <img src="images/close.png" alt="close icon" class="products__undo-img">
           </button>
           <img src="${photo}" alt="product image" class="products__order-image">
           <h2 class="products__order-title">${name}</h2>

@@ -60,7 +60,8 @@ button {
 .help__close-btn,
 .products__close-btn,
 .shop__cart-close,
-.products__clear-btn {
+.products__clear-btn,
+.offers__close-btn {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -78,4 +79,17 @@ button {
   border: none;
   max-width: 30px;
   max-height: 30px;
+}
+
+.help__message-btn {
+  background-color: $red;
+  color: $white;
+  border-radius: 20px;
+  padding: 5px 15px;
+  font-size: 18px;
+  border: none;
+}
+
+.shop__cart-button {
+  display: none;
 }

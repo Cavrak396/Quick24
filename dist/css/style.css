@@ -226,7 +226,8 @@ button:hover {
 .help__close-btn,
 .products__close-btn,
 .shop__cart-close,
-.products__clear-btn {
+.products__clear-btn,
+.offers__close-btn {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -244,6 +245,19 @@ button:hover {
   border: none;
   max-width: 30px;
   max-height: 30px;
+}
+
+.help__message-btn {
+  background-color: rgb(255, 0, 0);
+  color: rgb(255, 255, 255);
+  border-radius: 20px;
+  padding: 5px 15px;
+  font-size: 18px;
+  border: none;
+}
+
+.shop__cart-button {
+  display: none;
 }
 
 .login {
@@ -366,21 +380,6 @@ button:hover {
 
 .shop__logo-decoration {
   color: rgb(255, 0, 0);
-}
-
-.shop__header-form {
-  display: flex;
-}
-
-.shop__header-search {
-  display: block;
-  width: 600px;
-  padding: 10px 12px;
-  font-size: 16px;
-  border-radius: 10px;
-  border: none;
-  box-shadow: 4px 4px 17px 5px rgb(212, 212, 212);
-  margin: 0 15px;
 }
 
 .navigation__list-item {
@@ -506,7 +505,7 @@ button:hover {
 }
 
 .shop__cart {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: -100%;
   height: 100vh;
@@ -753,6 +752,7 @@ button:hover {
 }
 
 .admin__preview {
+  position: relative;
   max-width: 75%;
   flex: 1 1 75%;
   overflow: scroll;
@@ -776,15 +776,23 @@ button:hover {
 }
 
 .admin__account {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   max-width: 400px;
   padding: 20px 0;
-  margin: 0 auto;
   text-align: center;
 }
 
 .admin__profile-photo {
   max-width: 100px;
   max-height: 100px;
+  margin-bottom: 15px;
+}
+
+.admin__username {
+  margin-bottom: 7px;
 }
 
 .admin__products-title {
@@ -876,6 +884,58 @@ button:hover {
   transform: rotate(-6deg);
 }
 
+.offers__item-info {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(1, 1, 1, 0.5);
+  z-index: 20;
+}
+
+.offers__item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  padding: 15px 10px;
+}
+
+.offers__item-image {
+  max-width: 250px;
+  max-height: 250px;
+  margin-bottom: 20px;
+}
+
+.offers__item-title,
+.offers__item-price {
+  display: block;
+}
+
+.offers__item-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.offers__item-price {
+  font-weight: 500;
+  margin-bottom: 7px;
+}
+
+.offers__item-text {
+  max-width: 355px;
+  line-height: 23px;
+}
+
+.offers__close-img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
 .help {
   position: absolute;
   top: 0;
@@ -934,6 +994,18 @@ button:hover {
 .help__methods-lines {
   line-height: 20px;
   color: rgba(100, 100, 100, 0.7);
+}
+
+.help__form-label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.help__message-input {
+  display: block;
+  width: 500px;
+  padding: 5px 10px 160px 10px;
+  margin-bottom: 10px;
 }
 
 .products {
