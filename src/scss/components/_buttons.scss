@@ -92,4 +92,14 @@ button {
 
 .shop__cart-button {
   display: none;
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  background-color: $red;
+  color: $white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 20px;
+  font-weight: $medium;
 }

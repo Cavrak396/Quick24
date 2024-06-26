@@ -258,6 +258,16 @@ button:hover {
 
 .shop__cart-button {
   display: none;
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  background-color: rgb(255, 0, 0);
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 20px;
+  font-weight: 500;
 }
 
 .login {
