@@ -17,6 +17,10 @@
   font-size: 40px;
   font-weight: $semi;
   color: $black;
+
+  @include phone {
+    font-size: 20px;
+  }
 }
 
 .shop__logo-decoration {
@@ -25,6 +29,10 @@
 
 .navigation__list-item {
   margin-right: 30px;
+
+  @include phone {
+    margin-right: 10px;
+  }
 }
 
 .navigation__list-link {
@@ -37,6 +45,10 @@
     transition: $normal;
     opacity: 0.7;
   }
+
+  @include phone {
+    font-size: 13px;
+  }
 }
 
 .navigation__link-image {
@@ -44,6 +56,11 @@
   max-width: 25px;
   max-height: 25px;
   margin-right: 8px;
+
+  @include phone {
+    max-width: 15px;
+    max-height: 15px;
+  }
 }
 
 .navigation__link-text {
@@ -59,23 +76,44 @@
   width: 100%;
   background-color: $black;
   color: $white;
+
+  @include phone {
+    font-size: 14px;
+  }
 }
 
 .shop__marketing-line {
   display: flex;
   padding: 20px 0;
+
+  @include phone {
+    flex-direction: column;
+  }
 }
 
 .shop__marketing-list--large {
   margin: 0 10px;
   max-width: calc(60% - 20px);
   flex: 1 1 calc(60% - 20px);
+
+  @include phone {
+    margin: 0 0 10px 0;
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
 }
 
 .shop__marketing-list--small {
   margin: 0 auto;
   max-width: calc(40% - 20px);
   flex: 1 1 calc(40% - 20px);
+
+  @include phone {
+    max-width: 100%;
+    flex: 1 1 100%;
+    min-height: 300px;
+    margin: 0 0 10px 0;
+  }
 }
 
 .shop__marketing-item {
@@ -93,6 +131,10 @@
 
 .shop__marketing-item--large {
   min-height: 600px;
+
+  @include phone {
+    min-height: 312px;
+  }
 }
 
 .shop__marketing-link {
@@ -126,14 +168,24 @@
   transform: translate(-50%, -50%);
   color: $white;
   z-index: 10;
+  text-align: center;
 }
 
 .shop__marketing-title--large {
   font-size: 40px;
+
+  @include phone {
+    font-size: 17px;
+  }
 }
 
 .shop__marketing-title--small {
   font-size: 20px;
+
+  @include phone {
+    width: 300px;
+    font-size: 20px;
+  }
 }
 
 .shop__marketing-item--small {

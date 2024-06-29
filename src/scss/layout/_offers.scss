@@ -1,3 +1,11 @@
+.offers {
+  margin-bottom: 90px;
+
+  @include phone {
+    margin-bottom: 20px;
+  }
+}
+
 .offers__title {
   font-size: 18px;
   text-align: center;
@@ -5,6 +13,10 @@
   color: $white;
   padding: 13px 0;
   margin-bottom: 20px;
+
+  @include phone {
+    font-size: 14px;
+  }
 }
 
 .offers__list {
@@ -17,6 +29,12 @@
   margin: 0 10px 70px 10px;
   max-width: calc(20% - 20px);
   flex: 1 1 calc(20% - 20px);
+
+  @include phone {
+    margin: 0px 10px 35px 10px;
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
 }
 
 .offers__product-image {
@@ -24,6 +42,11 @@
   max-width: 200px;
   max-height: 200px;
   margin: 0 auto 10px auto;
+
+  @include phone {
+    max-width: 150px;
+    max-height: 150px;
+  }
 }
 
 .offers__product-title,
@@ -45,6 +68,10 @@
   max-width: 85px;
   margin: 0 auto;
   transform: rotate(-6deg);
+
+  @include phone {
+    font-size: 13px;
+  }
 }
 
 .offers__item-info {
@@ -64,7 +91,8 @@
   transform: translate(-50%, -50%);
   text-align: center;
   background-color: $white;
-  padding: 15px 10px;
+  padding: 15px 10px 30px 10px;
+  border-radius: 20px;
 }
 
 .offers__item-image {
@@ -86,12 +114,13 @@
 
 .offers__item-price {
   font-weight: $medium;
-  margin-bottom: 7px;
+  margin-bottom: 13px;
 }
 
 .offers__item-text {
   max-width: 355px;
-  line-height: 23px;
+  line-height: 19px;
+  font-size: 15px;
 }
 
 .offers__close-img {

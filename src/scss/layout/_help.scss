@@ -30,6 +30,10 @@
   font-size: 30px;
   font-weight: $semi;
   margin-bottom: 30px;
+
+  @include phone {
+    font-size: 20px;
+  }
 }
 
 .help__undertitle {
@@ -41,6 +45,10 @@
   background-color: $red;
   padding: 10px 5px;
   transform: rotate(3deg);
+
+  @include phone {
+    font-size: 15px;
+  }
 }
 
 .help__methods-item {
@@ -51,16 +59,30 @@
 .help__methods-linetitle {
   font-weight: $semi;
   margin-bottom: 10px;
+
+  @include phone {
+    line-height: 18px;
+  }
 }
 
 .help__methods-lines {
   line-height: 20px;
   color: $deep_gray;
+
+  @include phone {
+    font-size: 15px;
+    line-height: 18px;
+  }
 }
 
 .help__form-label {
   display: block;
   margin-bottom: 10px;
+
+  @include phone {
+    font-size: 15px;
+    margin-bottom: 7px;
+  }
 }
 
 .help__message-input {
@@ -68,4 +90,8 @@
   width: 500px;
   padding: 5px 10px 160px 10px;
   margin-bottom: 10px;
+
+  @include phone {
+    width: 100%;
+  }
 }

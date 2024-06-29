@@ -221,7 +221,7 @@ class ProductsView extends View {
           <h2 class="products__order-title">${name}</h2>
           <span class="products__order-price">${price}</span>
           <input type="number" class="products__order-quantity js-product-quantity" min="1" max="5" value="1">
-          <button type="button" class="products__order-button js-order-btn"> Order </button>
+          <button type="button" class="products__order-button js-order-btn"> Order Now </button>
         </div>
       </div>
     `;

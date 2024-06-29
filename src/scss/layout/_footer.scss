@@ -1,0 +1,34 @@
+.footer {
+  background-color: $black;
+  padding: 100px 0;
+}
+
+.footer__company-text {
+  color: $white;
+  text-align: center;
+}
+
+.footer__company-title {
+  font-size: 70px;
+  font-weight: $semi;
+  margin-bottom: 15px;
+
+  @include phone {
+    font-size: 40px;
+  }
+}
+
+.footer__title-decoration {
+  color: $red;
+}
+
+.footer__company-lines {
+  font-size: 20px;
+  margin-bottom: 20px;
+  line-height: 25px;
+
+  @include phone {
+    font-size: 15px;
+    line-height: 20px;
+  }
+}

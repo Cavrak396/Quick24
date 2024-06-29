@@ -111,11 +111,13 @@
   top: 50%;
   left: 50%;
   width: 500px;
-  height: 500px;
+  min-height: 519px;
   transform: translate(-50%, -50%);
   background-color: $white;
   z-index: 30;
   text-align: center;
+  border-radius: 20px;
+  padding: 25px 10px;
 }
 
 .products__order-image,
@@ -133,11 +135,12 @@
 .products__order-title {
   font-size: 27px;
   font-weight: $semi;
-  margin-bottom: 20px;
+  margin-bottom: 11px;
 }
 
 .products__order-price {
-  font-weight: $semi;
+  font-weight: $medium;
+  font-size: 18px;
   margin-bottom: 15px;
 }
 
@@ -145,7 +148,7 @@
   display: block;
   margin: 0 auto 10px auto;
   border-radius: 20px;
-  width: 200px;
-  min-height: 30px;
+  width: 220px;
+  min-height: 37px;
   padding: 0 10px;
 }

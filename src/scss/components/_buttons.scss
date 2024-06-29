@@ -1,4 +1,7 @@
 button {
+  background: none;
+  border: none;
+
   @include hover {
     cursor: pointer;
     transition: $normal;
@@ -16,7 +19,6 @@ button {
   padding: 8px 12px;
   font-size: 15px;
   border-radius: 20px;
-  border: none;
   background-color: $red;
   margin-right: 10px;
   color: $white;
@@ -25,7 +27,6 @@ button {
 
 .login__panel-skip {
   color: $deep_gray;
-  border: none;
   font-size: 13px;
   display: flex;
   justify-content: center;
@@ -38,7 +39,6 @@ button {
   color: $white;
   background-color: $red;
   border-radius: 20px;
-  border: none;
   font-size: 20px;
   padding: 8px 15px;
   box-shadow: 4px 4px 17px 5px $gray;
@@ -51,7 +51,6 @@ button {
   font-weight: $semi;
   background-color: $red;
   color: $white;
-  border: none;
   border-radius: 20px;
 }
 
@@ -67,8 +66,6 @@ button {
   right: 10px;
   max-width: 30px;
   max-height: 30px;
-  background: none;
-  border: none;
   z-index: 15;
 }
 
@@ -76,7 +73,6 @@ button {
   position: absolute;
   top: 50%;
   right: 20px;
-  border: none;
   max-width: 30px;
   max-height: 30px;
 }
@@ -87,15 +83,39 @@ button {
   border-radius: 20px;
   padding: 5px 15px;
   font-size: 18px;
-  border: none;
+
+  @include phone {
+    font-size: 15px;
+  }
 }
 
 .shop__cart-button {
   background-color: $red;
   color: $white;
-  border: none;
   padding: 5px 10px;
   border-radius: 20px;
   font-size: 16px;
   font-weight: $semi;
+}
+
+.products__order-button {
+  display: block;
+  margin: 0 auto;
+  background-color: $red;
+  color: $white;
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-weight: $semi;
+}
+
+.footer__company-button {
+  color: $white;
+  background-color: $red;
+  padding: 10px 20px;
+  font-size: 20px;
+  border-radius: 20px;
+
+  @include phone {
+    font-size: 15px;
+  }
 }

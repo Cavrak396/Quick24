@@ -166,6 +166,10 @@ body {
   margin-bottom: 7px;
 }
 
+button {
+  background: none;
+  border: none;
+}
 button:hover {
   cursor: pointer;
   transition: 0.7s;
@@ -182,7 +186,6 @@ button:hover {
   padding: 8px 12px;
   font-size: 15px;
   border-radius: 20px;
-  border: none;
   background-color: rgb(255, 0, 0);
   margin-right: 10px;
   color: rgb(255, 255, 255);
@@ -191,7 +194,6 @@ button:hover {
 
 .login__panel-skip {
   color: rgba(100, 100, 100, 0.7);
-  border: none;
   font-size: 13px;
   display: flex;
   justify-content: center;
@@ -204,7 +206,6 @@ button:hover {
   color: rgb(255, 255, 255);
   background-color: rgb(255, 0, 0);
   border-radius: 20px;
-  border: none;
   font-size: 20px;
   padding: 8px 15px;
   box-shadow: 4px 4px 17px 5px rgb(212, 212, 212);
@@ -217,7 +218,6 @@ button:hover {
   font-weight: 600;
   background-color: rgb(255, 0, 0);
   color: rgb(255, 255, 255);
-  border: none;
   border-radius: 20px;
 }
 
@@ -233,8 +233,6 @@ button:hover {
   right: 10px;
   max-width: 30px;
   max-height: 30px;
-  background: none;
-  border: none;
   z-index: 15;
 }
 
@@ -242,7 +240,6 @@ button:hover {
   position: absolute;
   top: 50%;
   right: 20px;
-  border: none;
   max-width: 30px;
   max-height: 30px;
 }
@@ -253,21 +250,47 @@ button:hover {
   border-radius: 20px;
   padding: 5px 15px;
   font-size: 18px;
-  border: none;
+}
+@media screen and (max-width: 767px) {
+  .help__message-btn {
+    font-size: 15px;
+  }
 }
 
 .shop__cart-button {
   background-color: rgb(255, 0, 0);
   color: rgb(255, 255, 255);
-  border: none;
   padding: 5px 10px;
   border-radius: 20px;
   font-size: 16px;
   font-weight: 600;
 }
 
+.products__order-button {
+  display: block;
+  margin: 0 auto;
+  background-color: rgb(255, 0, 0);
+  color: rgb(255, 255, 255);
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.footer__company-button {
+  color: rgb(255, 255, 255);
+  background-color: rgb(255, 0, 0);
+  padding: 10px 20px;
+  font-size: 20px;
+  border-radius: 20px;
+}
+@media screen and (max-width: 767px) {
+  .footer__company-button {
+    font-size: 15px;
+  }
+}
+
 .login {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -383,6 +406,11 @@ button:hover {
   font-weight: 600;
   color: rgb(1, 1, 1);
 }
+@media screen and (max-width: 767px) {
+  .shop__header-logo {
+    font-size: 20px;
+  }
+}
 
 .shop__logo-decoration {
   color: rgb(255, 0, 0);
@@ -390,6 +418,11 @@ button:hover {
 
 .navigation__list-item {
   margin-right: 30px;
+}
+@media screen and (max-width: 767px) {
+  .navigation__list-item {
+    margin-right: 10px;
+  }
 }
 
 .navigation__list-link {
@@ -402,12 +435,23 @@ button:hover {
   transition: 0.7s;
   opacity: 0.7;
 }
+@media screen and (max-width: 767px) {
+  .navigation__list-link {
+    font-size: 13px;
+  }
+}
 
 .navigation__link-image {
   display: block;
   max-width: 25px;
   max-height: 25px;
   margin-right: 8px;
+}
+@media screen and (max-width: 767px) {
+  .navigation__link-image {
+    max-width: 15px;
+    max-height: 15px;
+  }
 }
 
 .navigation__link-text {
@@ -424,10 +468,20 @@ button:hover {
   background-color: rgb(1, 1, 1);
   color: rgb(255, 255, 255);
 }
+@media screen and (max-width: 767px) {
+  .shop__sales {
+    font-size: 14px;
+  }
+}
 
 .shop__marketing-line {
   display: flex;
   padding: 20px 0;
+}
+@media screen and (max-width: 767px) {
+  .shop__marketing-line {
+    flex-direction: column;
+  }
 }
 
 .shop__marketing-list--large {
@@ -435,11 +489,26 @@ button:hover {
   max-width: calc(60% - 20px);
   flex: 1 1 calc(60% - 20px);
 }
+@media screen and (max-width: 767px) {
+  .shop__marketing-list--large {
+    margin: 0 0 10px 0;
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+}
 
 .shop__marketing-list--small {
   margin: 0 auto;
   max-width: calc(40% - 20px);
   flex: 1 1 calc(40% - 20px);
+}
+@media screen and (max-width: 767px) {
+  .shop__marketing-list--small {
+    max-width: 100%;
+    flex: 1 1 100%;
+    min-height: 300px;
+    margin: 0 0 10px 0;
+  }
 }
 
 .shop__marketing-item {
@@ -457,6 +526,11 @@ button:hover {
 
 .shop__marketing-item--large {
   min-height: 600px;
+}
+@media screen and (max-width: 767px) {
+  .shop__marketing-item--large {
+    min-height: 312px;
+  }
 }
 
 .shop__marketing-link {
@@ -495,14 +569,26 @@ button:hover {
   transform: translate(-50%, -50%);
   color: rgb(255, 255, 255);
   z-index: 10;
+  text-align: center;
 }
 
 .shop__marketing-title--large {
   font-size: 40px;
 }
+@media screen and (max-width: 767px) {
+  .shop__marketing-title--large {
+    font-size: 17px;
+  }
+}
 
 .shop__marketing-title--small {
   font-size: 20px;
+}
+@media screen and (max-width: 767px) {
+  .shop__marketing-title--small {
+    width: 300px;
+    font-size: 20px;
+  }
 }
 
 .shop__marketing-item--small {
@@ -863,6 +949,15 @@ button:hover {
   font-size: 15px;
 }
 
+.offers {
+  margin-bottom: 90px;
+}
+@media screen and (max-width: 767px) {
+  .offers {
+    margin-bottom: 20px;
+  }
+}
+
 .offers__title {
   font-size: 18px;
   text-align: center;
@@ -870,6 +965,11 @@ button:hover {
   color: rgb(255, 255, 255);
   padding: 13px 0;
   margin-bottom: 20px;
+}
+@media screen and (max-width: 767px) {
+  .offers__title {
+    font-size: 14px;
+  }
 }
 
 .offers__list {
@@ -883,12 +983,25 @@ button:hover {
   max-width: calc(20% - 20px);
   flex: 1 1 calc(20% - 20px);
 }
+@media screen and (max-width: 767px) {
+  .offers__list-item {
+    margin: 0px 10px 35px 10px;
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+}
 
 .offers__product-image {
   display: block;
   max-width: 200px;
   max-height: 200px;
   margin: 0 auto 10px auto;
+}
+@media screen and (max-width: 767px) {
+  .offers__product-image {
+    max-width: 150px;
+    max-height: 150px;
+  }
 }
 
 .offers__product-title,
@@ -911,6 +1024,11 @@ button:hover {
   margin: 0 auto;
   transform: rotate(-6deg);
 }
+@media screen and (max-width: 767px) {
+  .offers__product-price {
+    font-size: 13px;
+  }
+}
 
 .offers__item-info {
   position: fixed;
@@ -929,7 +1047,8 @@ button:hover {
   transform: translate(-50%, -50%);
   text-align: center;
   background-color: rgb(255, 255, 255);
-  padding: 15px 10px;
+  padding: 15px 10px 30px 10px;
+  border-radius: 20px;
 }
 
 .offers__item-image {
@@ -951,12 +1070,13 @@ button:hover {
 
 .offers__item-price {
   font-weight: 500;
-  margin-bottom: 7px;
+  margin-bottom: 13px;
 }
 
 .offers__item-text {
   max-width: 355px;
-  line-height: 23px;
+  line-height: 19px;
+  font-size: 15px;
 }
 
 .offers__close-img {
@@ -997,6 +1117,11 @@ button:hover {
   font-weight: 600;
   margin-bottom: 30px;
 }
+@media screen and (max-width: 767px) {
+  .help__title {
+    font-size: 20px;
+  }
+}
 
 .help__undertitle {
   display: inline-block;
@@ -1008,6 +1133,11 @@ button:hover {
   padding: 10px 5px;
   transform: rotate(3deg);
 }
+@media screen and (max-width: 767px) {
+  .help__undertitle {
+    font-size: 15px;
+  }
+}
 
 .help__methods-item {
   margin-bottom: 25px;
@@ -1018,15 +1148,32 @@ button:hover {
   font-weight: 600;
   margin-bottom: 10px;
 }
+@media screen and (max-width: 767px) {
+  .help__methods-linetitle {
+    line-height: 18px;
+  }
+}
 
 .help__methods-lines {
   line-height: 20px;
   color: rgba(100, 100, 100, 0.7);
 }
+@media screen and (max-width: 767px) {
+  .help__methods-lines {
+    font-size: 15px;
+    line-height: 18px;
+  }
+}
 
 .help__form-label {
   display: block;
   margin-bottom: 10px;
+}
+@media screen and (max-width: 767px) {
+  .help__form-label {
+    font-size: 15px;
+    margin-bottom: 7px;
+  }
 }
 
 .help__message-input {
@@ -1034,6 +1181,11 @@ button:hover {
   width: 500px;
   padding: 5px 10px 160px 10px;
   margin-bottom: 10px;
+}
+@media screen and (max-width: 767px) {
+  .help__message-input {
+    width: 100%;
+  }
 }
 
 .products {
@@ -1149,11 +1301,13 @@ button:hover {
   top: 50%;
   left: 50%;
   width: 500px;
-  height: 500px;
+  min-height: 519px;
   transform: translate(-50%, -50%);
   background-color: rgb(255, 255, 255);
   z-index: 30;
   text-align: center;
+  border-radius: 20px;
+  padding: 25px 10px;
 }
 
 .products__order-image,
@@ -1171,11 +1325,12 @@ button:hover {
 .products__order-title {
   font-size: 27px;
   font-weight: 600;
-  margin-bottom: 20px;
+  margin-bottom: 11px;
 }
 
 .products__order-price {
-  font-weight: 600;
+  font-weight: 500;
+  font-size: 18px;
   margin-bottom: 15px;
 }
 
@@ -1183,7 +1338,44 @@ button:hover {
   display: block;
   margin: 0 auto 10px auto;
   border-radius: 20px;
-  width: 200px;
-  min-height: 30px;
+  width: 220px;
+  min-height: 37px;
   padding: 0 10px;
+}
+
+.footer {
+  background-color: rgb(1, 1, 1);
+  padding: 100px 0;
+}
+
+.footer__company-text {
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+.footer__company-title {
+  font-size: 70px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+@media screen and (max-width: 767px) {
+  .footer__company-title {
+    font-size: 40px;
+  }
+}
+
+.footer__title-decoration {
+  color: rgb(255, 0, 0);
+}
+
+.footer__company-lines {
+  font-size: 20px;
+  margin-bottom: 20px;
+  line-height: 25px;
+}
+@media screen and (max-width: 767px) {
+  .footer__company-lines {
+    font-size: 15px;
+    line-height: 20px;
+  }
 }
