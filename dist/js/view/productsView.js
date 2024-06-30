@@ -23,6 +23,7 @@ class ProductsView extends View {
     if (this.productCartBtn) {
       this.productCartBtn.addEventListener("click", () => {
         this.productCart.classList.add("active");
+        this.body.classList.add("hide");
       });
     }
   }
@@ -35,6 +36,7 @@ class ProductsView extends View {
     if (this.productCartCloser) {
       this.productCartCloser.addEventListener("click", () => {
         this.productCart.classList.remove("active");
+        this.body.classList.remove("hide");
       });
     }
   }
@@ -61,7 +63,7 @@ class ProductsView extends View {
           const cartItem = event.target.closest(".js-cart-item");
           if (cartItem) {
             const title = cartItem
-              .querySelector(".shop__cart-title")
+              .querySelector(".js-cart-tag")
               .textContent.trim();
             this.productInfo.delete(title);
             cartItem.remove();
@@ -143,7 +145,7 @@ class ProductsView extends View {
       </button>
       <img src="${cartItem.thumbnail}" alt="product image" class="shop__cart-image">
       <div class="shop__cart-line">
-        <span class="shop__cart-title"> ${cartItem.title} </span>
+        <span class="shop__cart-tag js-cart-tag"> ${cartItem.title} </span>
         <span class="shop__cart-price"> Original price: <span class="shop__cart-decoration">${cartItem.price}</span> </span>
         <span class="shop__cart-quantity"> Your order: <span class="shop__cart-decoration">${cartItem.quantity}$</span> </span>
       </div>

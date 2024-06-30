@@ -93,6 +93,10 @@
   background-color: $white;
   padding: 15px 10px 30px 10px;
   border-radius: 20px;
+
+  @include phone {
+    padding: 35px 10px 30px 10px;
+  }
 }
 
 .offers__item-image {

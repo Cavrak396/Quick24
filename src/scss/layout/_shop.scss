@@ -204,6 +204,10 @@
   overflow: scroll;
   box-shadow: -5px 10px 24px 15px $light_black;
   padding: 20px;
+
+  @include phone {
+    width: 90%;
+  }
 }
 
 .shop__cart-empty {
@@ -211,12 +215,17 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  @include phone {
+    font-size: 12px;
+  }
 }
 
 .shop__cart-item {
   display: flex;
   align-items: center;
   position: relative;
+  margin-bottom: 20px;
 }
 
 .shop__cart-list {
@@ -229,21 +238,45 @@
   max-width: 150px;
   max-height: 150px;
   margin-right: 10px;
+
+  @include phone {
+    max-width: 50px;
+    max-height: 50px;
+  }
 }
 
-.shop__cart-title,
+.shop__cart-tag,
+.products__product-tag,
 .shop__cart-price {
   display: block;
 }
 
-.shop__cart-title {
+.shop__cart-title,
+.shop__cart-tag,
+.products__product-tag {
   font-size: 20px;
   margin-bottom: 15px;
   font-weight: $semi;
+  color: $black;
 }
 
-.shop__cart-price {
+.shop__cart-tag {
+  @include phone {
+    font-size: 13px;
+    margin-bottom: 5px;
+    max-width: 134px;
+    line-height: 15px;
+  }
+}
+
+.shop__cart-price,
+.shop__cart-quantity {
   margin-bottom: 5px;
+
+  @include phone {
+    font-size: 13px;
+    margin-bottom: 2px;
+  }
 }
 
 .shop__cart-decoration {
@@ -271,11 +304,19 @@
   padding: 10px 15px;
   margin-bottom: 5px;
   width: 350px;
+
+  @include phone {
+    width: 215px;
+  }
 }
 
 .active {
   right: 0;
   transition: $normal;
+}
+
+.hide {
+  overflow-y: hidden !important;
 }
 
 .shop__close-img {

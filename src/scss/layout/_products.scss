@@ -41,6 +41,11 @@
   max-width: 566px;
   margin: 0 auto;
   line-height: 23px;
+
+  @include phone {
+    font-size: 14px;
+    line-height: 19px;
+  }
 }
 
 .products__tape {
@@ -60,6 +65,10 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+
+  @include phone {
+    flex-direction: column;
+  }
 }
 
 .products__list-item {
@@ -67,6 +76,12 @@
   max-width: calc(14.28% - 30px);
   flex: 1 1 calc(14.28% - 30px);
   text-align: center;
+
+  @include phone {
+    max-width: 100%;
+    flex: 1 1 100%;
+    margin: 0 15px 20px 15px;
+  }
 }
 
 .products__product-image,
@@ -118,6 +133,11 @@
   text-align: center;
   border-radius: 20px;
   padding: 25px 10px;
+
+  @include phone {
+    width: 300px;
+    min-height: 380px;
+  }
 }
 
 .products__order-image,
@@ -130,18 +150,31 @@
   max-width: 300px;
   max-height: 300px;
   margin: 0 auto 10px auto;
+
+  @include phone {
+    max-width: 170px;
+    max-height: 170px;
+  }
 }
 
 .products__order-title {
   font-size: 27px;
   font-weight: $semi;
   margin-bottom: 11px;
+
+  @include phone {
+    font-size: 20px;
+  }
 }
 
 .products__order-price {
   font-weight: $medium;
   font-size: 18px;
   margin-bottom: 15px;
+
+  @include phone {
+    font-size: 16px;
+  }
 }
 
 .products__order-quantity {
