@@ -34,6 +34,11 @@
   font-size: 30px;
   font-weight: $semi;
   margin-bottom: 13px;
+
+  @include phone {
+    font-size: 24px;
+    margin-bottom: 9px;
+  }
 }
 
 .products__join-lines {
@@ -45,6 +50,7 @@
   @include phone {
     font-size: 14px;
     line-height: 19px;
+    max-width: 314px;
   }
 }
 

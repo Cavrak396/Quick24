@@ -5,11 +5,20 @@
   display: flex;
   align-items: center;
   margin-bottom: 20px;
+
+  @include phone {
+    margin-bottom: 15px;
+  }
 }
 
 .shop__header-line {
   padding: 20px 0;
   justify-content: space-between;
+
+  @include phone {
+    flex-direction: column;
+    margin-bottom: 2px;
+  }
 }
 
 .shop__header-logo {
@@ -32,6 +41,10 @@
 
   @include phone {
     margin-right: 10px;
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }
 
@@ -60,6 +73,18 @@
   @include phone {
     max-width: 15px;
     max-height: 15px;
+  }
+}
+
+.navigation__link-image--responsive {
+  @include phone {
+    display: none;
+  }
+}
+
+.navigation__link-image--cart {
+  @include phone {
+    margin-right: 0;
   }
 }
 
@@ -306,7 +331,9 @@
   width: 350px;
 
   @include phone {
-    width: 215px;
+    font-size: 13px;
+    width: 190px;
+    padding: 7px 15px;
   }
 }
 

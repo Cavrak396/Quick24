@@ -20,6 +20,8 @@
 
   @include phone {
     max-width: 90%;
+    max-height: 565px;
+    overflow-y: scroll;
   }
 }
 
@@ -61,6 +63,11 @@
   font-size: 18px;
   font-weight: $semi;
   margin-bottom: 34px;
+
+  @include phone {
+    font-size: 17px;
+    margin-bottom: 15px;
+  }
 }
 
 .support__contact-line {
@@ -83,6 +90,10 @@
   display: block;
   font-size: 24px;
   margin-bottom: 10px;
+
+  @include phone {
+    font-size: 19px;
+  }
 }
 
 .support__time-decoration {
@@ -94,6 +105,11 @@
   display: block;
   margin-bottom: 7px;
   font-size: 14px;
+
+  @include phone {
+    font-size: 12px;
+    margin-bottom: 9px;
+  }
 }
 
 .support__contact-title {
@@ -101,12 +117,23 @@
   margin-bottom: 12px;
   font-weight: $semi;
   font-size: 19px;
+
+  @include phone {
+    font-size: 17px;
+    margin-bottom: 5px;
+  }
 }
 
 .support__contact-text {
   max-width: 600px;
   line-height: 20px;
   margin-bottom: 15px;
+
+  @include phone {
+    line-height: 18px;
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
 }
 
 .support__socials {
@@ -116,7 +143,7 @@
 .support__mail-text,
 .support__phone-text {
   display: block;
-  margin-bottom: 7px;
+  margin-bottom: 1px;
 }
 
 .support__message-tag {
@@ -129,6 +156,11 @@
   padding: 10px 10px 100px 10px;
   width: 80%;
   margin-bottom: 14px;
+
+  @include phone {
+    padding: 10px 10px 29px 10px;
+    margin-bottom: 8px;
+  }
 }
 
 .support__close-img {

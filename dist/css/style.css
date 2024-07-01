@@ -201,6 +201,12 @@ button:hover {
   text-decoration: underline;
   margin-bottom: 20px;
 }
+@media screen and (max-width: 767px) {
+  .login__panel-skip {
+    margin-bottom: 9px;
+    font-size: 12px;
+  }
+}
 
 .shop__header-button {
   color: rgb(255, 255, 255);
@@ -233,7 +239,7 @@ button:hover {
   right: 10px;
   max-width: 30px;
   max-height: 30px;
-  z-index: 15;
+  z-index: 25;
 }
 
 .products__delete-btn {
@@ -273,7 +279,7 @@ button:hover {
 }
 @media screen and (max-width: 767px) {
   .shop__cart-button {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 
@@ -305,7 +311,7 @@ button:hover {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   z-index: 15;
   background-position: center;
   background-repeat: no-repeat;
@@ -336,6 +342,11 @@ button:hover {
   box-shadow: 10px 14px 28px rgb(212, 212, 212);
   padding: 20px 0;
   z-index: 25;
+}
+@media screen and (max-width: 767px) {
+  .login__panel {
+    width: 297px;
+  }
 }
 
 .login__panel-jointext {
@@ -373,6 +384,11 @@ button:hover {
   padding: 5px 10px;
   width: 100%;
 }
+@media screen and (max-width: 767px) {
+  .login__panel-input {
+    margin: 0 auto 8px auto;
+  }
+}
 
 .login__panel-text {
   text-align: center;
@@ -383,6 +399,12 @@ button:hover {
   font-weight: 600;
   margin-bottom: 5px;
 }
+@media screen and (max-width: 767px) {
+  .login__panel-sale {
+    font-size: 18px;
+    margin-bottom: 2px;
+  }
+}
 
 .login__panel-lines {
   font-size: 15px;
@@ -390,6 +412,12 @@ button:hover {
   line-height: 18px;
   max-width: 300px;
   margin: 0 auto;
+}
+@media screen and (max-width: 767px) {
+  .login__panel-lines {
+    font-size: 13px;
+    line-height: 16px;
+  }
 }
 
 .login__panel-decoration {
@@ -405,10 +433,24 @@ button:hover {
   align-items: center;
   margin-bottom: 20px;
 }
+@media screen and (max-width: 767px) {
+  .shop__header-line,
+  .shop__header-primary,
+  .shop__header-form,
+  .navigation__list {
+    margin-bottom: 15px;
+  }
+}
 
 .shop__header-line {
   padding: 20px 0;
   justify-content: space-between;
+}
+@media screen and (max-width: 767px) {
+  .shop__header-line {
+    flex-direction: column;
+    margin-bottom: 2px;
+  }
 }
 
 .shop__header-logo {
@@ -433,6 +475,9 @@ button:hover {
 @media screen and (max-width: 767px) {
   .navigation__list-item {
     margin-right: 10px;
+  }
+  .navigation__list-item:last-child {
+    margin-right: 0;
   }
 }
 
@@ -462,6 +507,18 @@ button:hover {
   .navigation__link-image {
     max-width: 15px;
     max-height: 15px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .navigation__link-image--responsive {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .navigation__link-image--cart {
+    margin-right: 0;
   }
 }
 
@@ -727,7 +784,9 @@ button:hover {
 @media screen and (max-width: 767px) {
   .shop__cart-user,
   .shop__cart-address {
-    width: 215px;
+    font-size: 13px;
+    width: 190px;
+    padding: 7px 15px;
   }
 }
 
@@ -768,6 +827,8 @@ button:hover {
 @media screen and (max-width: 767px) {
   .support__container {
     max-width: 90%;
+    max-height: 565px;
+    overflow-y: scroll;
   }
 }
 
@@ -816,6 +877,12 @@ button:hover {
   font-weight: 600;
   margin-bottom: 34px;
 }
+@media screen and (max-width: 767px) {
+  .support__title {
+    font-size: 17px;
+    margin-bottom: 15px;
+  }
+}
 
 .support__contact-line {
   display: flex;
@@ -839,6 +906,11 @@ button:hover {
   font-size: 24px;
   margin-bottom: 10px;
 }
+@media screen and (max-width: 767px) {
+  .support__work-text {
+    font-size: 19px;
+  }
+}
 
 .support__time-decoration {
   color: rgb(255, 0, 0);
@@ -850,6 +922,12 @@ button:hover {
   margin-bottom: 7px;
   font-size: 14px;
 }
+@media screen and (max-width: 767px) {
+  .support__time {
+    font-size: 12px;
+    margin-bottom: 9px;
+  }
+}
 
 .support__contact-title {
   display: block;
@@ -857,11 +935,24 @@ button:hover {
   font-weight: 600;
   font-size: 19px;
 }
+@media screen and (max-width: 767px) {
+  .support__contact-title {
+    font-size: 17px;
+    margin-bottom: 5px;
+  }
+}
 
 .support__contact-text {
   max-width: 600px;
   line-height: 20px;
   margin-bottom: 15px;
+}
+@media screen and (max-width: 767px) {
+  .support__contact-text {
+    line-height: 18px;
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
 }
 
 .support__socials {
@@ -871,7 +962,7 @@ button:hover {
 .support__mail-text,
 .support__phone-text {
   display: block;
-  margin-bottom: 7px;
+  margin-bottom: 1px;
 }
 
 .support__message-tag {
@@ -884,6 +975,12 @@ button:hover {
   padding: 10px 10px 100px 10px;
   width: 80%;
   margin-bottom: 14px;
+}
+@media screen and (max-width: 767px) {
+  .support__text-input {
+    padding: 10px 10px 29px 10px;
+    margin-bottom: 8px;
+  }
 }
 
 .support__close-img {
@@ -911,6 +1008,11 @@ button:hover {
   height: 800px;
   background-color: rgb(255, 255, 255);
 }
+@media screen and (max-width: 767px) {
+  .admin__container {
+    width: 90%;
+  }
+}
 
 .admin__close-img {
   max-width: 100%;
@@ -921,6 +1023,12 @@ button:hover {
   display: flex;
   align-items: center;
   height: 100%;
+}
+@media screen and (max-width: 767px) {
+  .admin__line {
+    flex-direction: column;
+    height: auto;
+  }
 }
 
 .admin__options,
@@ -933,12 +1041,24 @@ button:hover {
   flex: 1 1 25%;
   background-color: rgb(112, 128, 144);
 }
+@media screen and (max-width: 767px) {
+  .admin__options {
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+}
 
 .admin__preview {
   position: relative;
   max-width: 75%;
   flex: 1 1 75%;
   overflow: scroll;
+}
+@media screen and (max-width: 767px) {
+  .admin__preview {
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
 }
 
 .admin__navigation-item {
@@ -966,6 +1086,12 @@ button:hover {
   max-width: 400px;
   padding: 20px 0;
   text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .admin__account {
+    position: static;
+    transform: translate(0, 0);
+  }
 }
 
 .admin__profile-photo {
@@ -996,6 +1122,13 @@ button:hover {
   max-width: calc(33.33% - 20px);
   flex: 1 1 calc(33.33% - 20px);
   text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .admin__products-item {
+    max-width: 100%;
+    flex: 1 1 100%;
+    margin: 0 10px 20px 10px;
+  }
 }
 
 .admin__product-image {
@@ -1299,6 +1432,12 @@ button:hover {
   font-weight: 600;
   margin-bottom: 13px;
 }
+@media screen and (max-width: 767px) {
+  .products__join-title {
+    font-size: 24px;
+    margin-bottom: 9px;
+  }
+}
 
 .products__join-lines {
   font-size: 17px;
@@ -1310,6 +1449,7 @@ button:hover {
   .products__join-lines {
     font-size: 14px;
     line-height: 19px;
+    max-width: 314px;
   }
 }
 
@@ -1461,6 +1601,11 @@ button:hover {
   background-color: rgb(1, 1, 1);
   padding: 100px 0;
 }
+@media screen and (max-width: 767px) {
+  .footer {
+    padding: 42px 0;
+  }
+}
 
 .footer__company-text {
   color: rgb(255, 255, 255);
@@ -1475,6 +1620,7 @@ button:hover {
 @media screen and (max-width: 767px) {
   .footer__company-title {
     font-size: 40px;
+    margin-bottom: 8px;
   }
 }
 
@@ -1491,5 +1637,6 @@ button:hover {
   .footer__company-lines {
     font-size: 15px;
     line-height: 20px;
+    margin-bottom: 13px;
   }
 }

@@ -19,6 +19,7 @@ class AdminView extends View {
       this.shop.insertAdjacentHTML("afterbegin", this._generateMarkup());
       this.adminContainer = document.querySelector(".js-admin");
       this.closeBtn = document.querySelector(".js-close-admin");
+      this.body.style.overflow = 'hidden';
       this._handleAdminStatus();
       this._closeAdminContainer();
     });
@@ -60,6 +61,7 @@ class AdminView extends View {
   _closeAdminContainer() {
     this.closeBtn.addEventListener("click", () => {
       this.adminContainer.style.display = "none";
+      this.body.style.overflow = 'auto';
     });
   }
 
@@ -112,16 +114,16 @@ class AdminView extends View {
           <div class="admin__products">
           <h2 class="admin__products-title"> Online Warehouse 📦</h2>
           <ul class="admin__products-list"> ${this.productData
-            .map((data) => {
-              return `
+        .map((data) => {
+          return `
             <li class="admin__products-item"> 
               <img src='${data.thumbnail}' class="admin__product-image">
               <span class="admin__product-title"> ${data.title} </span>
               <span class="admin__product-price"> ${data.price}$ </span>
             </li>`;
-            })
-            .slice(0, this.productData.length - 1)
-            .join(" ")} </ul>
+        })
+        .slice(0, this.productData.length - 1)
+        .join(" ")} </ul>
           </div>
           `;
   }

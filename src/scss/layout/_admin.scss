@@ -16,6 +16,10 @@
   width: 1200px;
   height: 800px;
   background-color: $white;
+
+  @include phone {
+    width: 90%;
+  }
 }
 
 .admin__close-img {
@@ -27,6 +31,11 @@
   display: flex;
   align-items: center;
   height: 100%;
+
+  @include phone {
+    flex-direction: column;
+    height: auto;
+  }
 }
 
 .admin__options,
@@ -38,6 +47,11 @@
   max-width: 25%;
   flex: 1 1 25%;
   background-color: $slate_gray;
+
+  @include phone {
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
 }
 
 .admin__preview {
@@ -45,6 +59,11 @@
   max-width: 75%;
   flex: 1 1 75%;
   overflow: scroll;
+
+  @include phone {
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
 }
 
 .admin__navigation-item {
@@ -73,6 +92,11 @@
   max-width: 400px;
   padding: 20px 0;
   text-align: center;
+
+  @include phone {
+    position: static;
+    transform: translate(0, 0);
+  }
 }
 
 .admin__profile-photo {
@@ -103,6 +127,12 @@
   max-width: calc(33.33% - 20px);
   flex: 1 1 calc(33.33% - 20px);
   text-align: center;
+
+  @include phone {
+    max-width: 100%;
+    flex: 1 1 100%;
+    margin: 0 10px 20px 10px;
+  }
 }
 
 .admin__product-image {
